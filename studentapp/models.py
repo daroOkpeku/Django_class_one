@@ -12,6 +12,7 @@ class Student_info(models.Model):
     
         name = models.CharField(max_length=255, null=False)
         student_id = models.CharField(max_length=30, null=True, unique=True)
+        # in here  course = models.CharField(max_length=255, null=False, choices=courses) you can only select item from the courses array
         course = models.CharField(max_length=255, null=False, choices=courses)
         email = models.EmailField(max_length=400, null=False, unique=True)
         phone_number = models.BigIntegerField(max_length=20, null=True)

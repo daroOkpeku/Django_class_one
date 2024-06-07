@@ -9,6 +9,7 @@ class AttendanceAdmin(admin.ModelAdmin):
     
 
 class StudentAdmin(admin.ModelAdmin):
+    # this allows the admin to do full scale search in the database and also view all the items in the database table
     search_fields = ['name', 'student_id', 'course', 'email', 'phone_number']
 
 admin.site.register(Student_info, StudentAdmin)
